@@ -1,0 +1,380 @@
+@import url("https://fonts.googleapis.com/css2?family=Croissant+One&family=Edu+TAS+Beginner:wght@600&family=Flow+Circular&family=Roboto:ital,wght@0,700;1,700&display=swap");
+
+:root {
+  --a: 0;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+html {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+}
+body {
+  width: 100vw;
+  height: 100%;
+  background-color: black;
+}
+
+.left {
+  width: 22vw;
+  height: 100%;
+  padding: 10px;
+}
+
+.close {
+  display: none;
+}
+
+.right {
+  width: 78vw;
+  margin: 15px 0;
+  position: relative;
+}
+
+.home ul li {
+  list-style: none;
+  width: 15px;
+  display: flex;
+  gap: 15px;
+  padding-top: 15px;
+  font-weight: bold;
+}
+
+.heading {
+  display: flex;
+  list-style: none;
+  gap: 15px;
+  width: 100%;
+  padding-top: 15px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.library {
+  height: 75vh;
+  position: relative;
+}
+
+.heading img {
+  width: 25px;
+}
+
+.header {
+  height: 55px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(34, 34, 34);
+}
+
+.header > * {
+  padding: 20px;
+}
+
+.nav > svg:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.footer {
+  display: flex;
+  color: grey;
+  font-size: 10px;
+  gap: 13px;
+  position: absolute;
+  bottom: 0;
+  padding: 34px 2px;
+}
+
+.footer a {
+  color: grey;
+}
+
+.spotify-playlist {
+  padding: 16px;
+}
+
+.card-container {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 15px;
+  max-height: 70vh;
+  overflow-y: auto;
+  scrollbar-color: rgb(71, 64, 64) rgb(36, 32, 32);
+
+  border-radius: 5px;
+}
+
+.card {
+  width: 200px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #252525;
+  position: relative;
+  font-size: small;
+  transition: all 1s;
+}
+
+.card > * {
+  padding-top: 8px;
+}
+
+.card img {
+  width: 100%;
+  padding-top: 0;
+  object-fit: contain;
+  border-radius: 5px;
+  box-shadow: 2px 2px 10px black;
+}
+
+.card:hover {
+  background-color: rgb(60, 59, 59);
+  cursor: pointer;
+  --a: 1;
+}
+
+.play-green {
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  right: 12px;
+  bottom: 95px;
+  opacity: var(--a);
+  transition: all 1s ease-out;
+}
+
+.ham-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.hamburger {
+  display: none;
+}
+
+.signup-btn {
+  background-color: rgb(43, 35, 35);
+  color: grey;
+  font-weight: bold;
+  padding: 10px;
+  width: 80px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: ease;
+  margin: 5px;
+}
+
+.signup-btn:hover {
+  font-weight: bold;
+  transform: scale(1.03);
+}
+
+.login-btn {
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  padding: 10px;
+  margin: 5px;
+  width: 80px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: ease;
+}
+
+.login-btn:hover {
+  font-weight: bold;
+  transform: scale(1.03);
+}
+
+.song-material {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.songbuttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.songbuttons > img {
+  width: 25px;
+  height: 25px;
+  transition: ease;
+}
+
+.songbuttons > img:hover {
+  transform: scale(1.25);
+}
+
+.song-list {
+  margin: 20px 0px;
+  height: 75%;
+}
+
+.song-list ul {
+  height: 100%;
+  padding: 0 15px;
+  overflow-y: auto;
+  scrollbar-color: rgb(71, 64, 64) rgb(36, 32, 32);
+  /* scrollbar-width: none; */
+  overflow-x: hidden;
+}
+
+.song-list ul li {
+  height: 45px;
+  width: 92%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin: 10px 0px;
+  padding: 0px 5px;
+  cursor: pointer;
+
+  font-size: 90%;
+  font-style: oblique;
+  font-weight: 500;
+  list-style-type: decimal-leading-zero;
+
+  border: 1px solid rgb(139, 132, 132);
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px rgb(195, 189, 189);
+}
+
+.play-svg {
+  width: 25px;
+  height: 25px;
+  transition: ease;
+}
+
+.play-svg:hover {
+  transform: scale(1.25);
+}
+
+.info {
+  width: 60%;
+}
+
+.playbar {
+  position: absolute;
+  bottom: 0;
+  background-color: #121212;
+  width: 95%;
+  box-sizing: border-box;
+  margin: 10px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+}
+
+.seekbar {
+  /* width: 5%; */
+  position: relative;
+  width: 90%;
+  bottom: 1px;
+  height: 8px;
+  background-color: white;
+  opacity: 0.5;
+  align-self: center;
+  border-radius: 5px;
+  display: flex;
+
+  cursor: pointer;
+}
+
+.seek-circle {
+  position: absolute;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  background-color: white;
+  align-self: center;
+}
+
+.songinfo,
+.songtime {
+  color: white;
+  font-style: italic;
+  font-family: "ROBOTO";
+  font-weight: 800;
+}
+
+@media (max-width: 1400px) {
+  .left {
+    background-color: black;
+    position: absolute;
+    z-index: 15;
+    left: -100%;
+    width: 300px;
+    height: 100vh;
+    transition: ease-in-out 1s;
+  }
+
+  .close {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }
+
+  .close-svg {
+    cursor: pointer;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .right {
+    height: 96vh;
+    width: 100vw;
+    margin: 0;
+  }
+
+  .signup-btn {
+    padding: 2px;
+    width: 60px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: ease;
+    margin: 2px;
+  }
+
+  .login-btn {
+    padding: 2px;
+    width: 60px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: ease;
+    margin: 2px;
+  }
+
+  .card-container {
+    justify-content: center;
+  }
+
+  .card {
+    width: 40vw;
+  }
+}
+
+@media (max-width: 600px) {
+  .card {
+    width: 80vw;
+  }
+}
